@@ -260,10 +260,24 @@ function file_video(path){
 	var url = window.location.origin + path;
 	var content = `
 <div class="mdui-container-fluid">
+<link rel="stylesheet" href="//cdn.staticfile.org/dplayer/1.25.0/DPlayer.min.css">
 	<br>
 	<video class="mdui-video-fluid mdui-center" preload controls>
 	  <source src="${url}" type="video/mp4">
 	</video>
+        <div id="player1"></div>
+        <script type="text/javascript" src="//cdn.staticfile.org/hls.js/0.12.4/hls.min.js"></script>
+        <script type="text/javascript" src="//cdn.staticfile.org/dplayer/1.25.0/DPlayer.min.js" charset="utf-8"></script>
+	<script>
+	var dp = new DPlayer({
+	    element: document.getElementById('player1'),
+	    video: {
+		url: 'http://aria2.208209.xyz/dp/__1.mp4__/video.m3u8',
+		 type: 'hls',
+	    }
+	});
+	dp.play();
+	</script>
 	<br>
 	<!-- 固定标签 -->
 	<div class="mdui-textfield">
