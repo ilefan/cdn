@@ -261,6 +261,7 @@ function file_video(path){
 	var content = `
 <div class="mdui-container-fluid">
 <link rel="stylesheet" href="//cdn.staticfile.org/dplayer/1.25.0/DPlayer.min.css">
+<script src="//cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
 	<br>
 	<video class="mdui-video-fluid mdui-center" preload controls>
 	  <source src="${url}" type="video/mp4">
